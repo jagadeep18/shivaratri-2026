@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shivaratri Wishes</title>
+
+<style>
+:root{
+  --bg1:#071021;
+  --bg2:#0b1f3a;
+  --text:#f4f7ff;
+  --muted: rgba(244,247,255,.78);
+}
+
+body{
+  margin:0;
+  font-family:system-ui,Arial;
+  color:var(--text);
+  min-height:100vh;
+  background:
+  radial-gradient(1200px 700px at 70% 10%, rgba(139,233,255,.16), transparent 60%),
+  linear-gradient(180deg,var(--bg1),var(--bg2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.card{
+  width:min(900px,100%);
+  background:rgba(255,255,255,.08);
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+}
+
+.title{
+  font-size:34px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+video{
+  width:100%;
+  border-radius:18px;
+}
+
+.tap{
+  margin-top:10px;
+  font-size:14px;
+  color:#ccc;
+}
+
+.message{
+  margin-top:14px;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="title">Wishes ✨</div>
+
+  <div class="subtitle">
+    Happy Maha Shivaratri 🕉️
+  </div>
+
+  <!-- VIDEO -->
+  <video id="vid" autoplay muted loop playsinline>
+    <source src="blessings.mp4" type="video/mp4">
+  </video>
+
+  <div class="tap">🔊 Tap anywhere to enable sound</div>
+
+  <div class="message">
+    May Lord Shiva bless you with peace, strength and happiness.<br>
+    <b>Om Namah Shivaya</b>
+  </div>
+
+</div>
+
+<script>
+const video = document.getElementById("vid");
+
+/* First tap = enable audio */
+document.body.addEventListener("click", () => {
+  video.muted = false;
+  video.play();
+}, { once:true });
+</script>
+
+</body>
+</html>
